@@ -1,0 +1,46 @@
+SB1
+
+Random K = 20, 50, 100, 300, 500 and N = 1000 for all cases, 3 each
+
+SB2
+
+Random 5 200 size cases and 3 Max Cases with both type of generation
+
+edge case:
+
+2 2 2
+1 2
+2 1
+
+SB 3 through 5
+
+Random cases of max respective size
+2 with K = N,N/2,N/3,N/4 and 50,30,10
+1 for each random type
+
+SB 6:
+6 max cases, 3 with each type of gen
+
+Handmade
+xx..
+..xx
+
+2 4 2
+1 1 0 0
+0 0 2 2
+
+xy00
+xy00
+
+2 4 2
+4 3 2 1
+4 3 2 1
+
+x..
+x..
+yy.
+3 3 2
+10 1 1
+10 1 1
+10 10 9
+and all four rotations and their reflections
