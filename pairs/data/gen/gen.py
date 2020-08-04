@@ -13,7 +13,7 @@ N - number of beads (1 - subtask limit)
 """
 
 
-SUBTASKS = 5
+SUBTASKS = 4
 MAX_SKILL = int(1e5)
 MIN_SKILL = 0
 
@@ -55,7 +55,6 @@ subtask_info = (
     (),
     (1000, defaults[1], defaults[2]),
     (defaults[0], defaults[1], triangle_skills),
-    (defaults[0], defaults[1], binary_skills),
     (defaults[0], random_a_inf_b, defaults[2]),
     defaults
 ) # MAXN, range gen, skill gen 
