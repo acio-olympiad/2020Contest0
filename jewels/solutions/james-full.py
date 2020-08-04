@@ -1,4 +1,4 @@
-N,jewels = open("jewels.in")
+N,jewels = open("jewelsin.txt")
 
 blocks = []
 l = 0
@@ -12,7 +12,7 @@ for j in jewels:
         l = 1
 blocks.append((l,c))
 
-print(blocks)
+#print(blocks)
 
 ans = 0
 if len(blocks) > 1:
@@ -31,4 +31,4 @@ if len(blocks) > 1:
 else:
     ans = N
 
-open("jewels.out","w").write(str(ans))
+open("jewelsout.txt","w").write(str(ans))
