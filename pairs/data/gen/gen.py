@@ -14,6 +14,7 @@ N - number of beads (1 - subtask limit)
 
 
 SUBTASKS = 4
+MAX_A = 2 * int(1e5)
 MAX_SKILL = int(1e5)
 MIN_SKILL = 0
 
@@ -47,7 +48,7 @@ def random_a_inf_b(skills):
         mn = min(s,mn)
         mx = max(s,mx)
     a = random.randint(mn*2,mx*2)
-    b = mx*2
+    b = MAX_A
     return a,b
 
 defaults = (100000, random_range, random_skills)
