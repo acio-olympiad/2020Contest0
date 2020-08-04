@@ -75,6 +75,7 @@ def ascending(N, B=0):
     blocks.sort()
     return blocks_to_string(blocks)
 
+"""
 def sub2(N): # at most 3 red
     reds = random.randint(0, min(N,3))
     s = blue(N-reds)
@@ -82,17 +83,35 @@ def sub2(N): # at most 3 red
         split = random.randint(0,len(s))
         s = s[:split] + 'r' + s[split:]
     return s
+"""
+
+def random_rotate(s):
+    split = random.randrange(0,len(s))
+    return s[split:] + s[:split]
+
+def sub2(N): # exactly 2, non adjacent reds
+    assert(N >= 4)
+    split = random.randint(1,N-3)
+    if random.randrange(0,2):
+        return 'r' + blue(split) + 'r' + blue(N-split-2)
+    else:
+        return blue(split) + 'r' + blue(N-split-2) + 'r'
  
 def sub4(N): # no adjacent red
     reds = random.randint(0,N//2)
     if reds == 0:
         return blue(N)
     else:
+        flip = random.randrange(0,1)
         blocks = random_partition(N-reds*2,reds) # need to make sure each block has at least 1 blue
         s = []
-        for i in range(reds): # perhaps start with blue some time?
-            s.append('r')
-            s.append(blue(blocks[i] + 1))
+        for i in range(reds):
+            if flip:
+                s.append('r')
+                s.append(blue(blocks[i] + 1))
+            else:
+                s.append(blue(blocks[i] + 1))
+                s.append('r')
     return ''.join(s)
 
 def rand(N):
@@ -103,13 +122,15 @@ def random_blocks(N, B=0):
     return blocks_to_string(blocks)
 
 def random_type(N):
-    return random.choice(CASE_TYPES)(N)
+    f = random.choice(CASE_TYPES)
+    if f == sub2 and N < 4: # cannot gen a sub2 case with size < 4
+        f = red
+    return f(N)
 
 def mixed(N, B=2):
     blocks = random_partition(N,B)
     s = [random_type(blocks[i]) for i in range(B)]
     return ''.join(s)
-
 
 CASE_TYPES = [blue, red, alternating, end_biased, middle_biased, ascending, sub2, sub4, rand, random_blocks, random_type, mixed]
 
@@ -154,4 +175,7 @@ else:
     case_type = random.choice(allowed_cases)
 
 print(N)
-print(CASE_TYPES[case_type](N, *map(int,args[3:])))
+s = CASE_TYPES[case_type](N, *map(int,args[3:]))
+if random.randrange(0,2):
+    s = random_rotate(s)
+print(s)
