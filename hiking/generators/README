@@ -1,0 +1,3 @@
+Build cases:
+run gen.py to get list of cases
+run tkgen.cpp on each case via some bootstrap which idk how to code in bash
