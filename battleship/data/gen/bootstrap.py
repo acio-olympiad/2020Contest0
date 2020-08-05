@@ -8,6 +8,6 @@ def r(cmd):
 
 for _ in range(cases):
     ln = input()
-    r("echo %s | ./tkgen > battleship%d.in" % (ln, cnt)) 
+    r("echo %s | ./tkgen > t_%d.in" % (ln, cnt)) 
     cnt += 1
 
