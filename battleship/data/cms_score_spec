@@ -1,31 +1,31 @@
 [
   [
-    -1,
+    15,
     "^(t_3|sample2|t_4|t_1|t_7|t_9|t_11|t_5|mincase1|t_6|t_8|t_10|t_2)$",
     "Subtask 1"
   ],
   [
-    -1,
+    15,
     "^(t_23|t_17|t_15|t_18|t_16|t_21|t_12|sample3|t_14|handmade1|t_20|t_13|t_24|t_25|t_34|t_22|t_19|t_26)$",
     "Subtask 2"
   ],
   [
-    -1,
+    15,
     "^(t_35|t_30|sample2|sample1|t_28|handmade5|handmade4|handmade2|t_32|t_31|t_11|t_33|mincase1|t_29|sample3|t_27|handmade1|handmade3|t_34|t_26)$",
     "Subtask 3"
   ],
   [
-    -1,
+    15,
     "^(t_35|t_40|t_30|sample2|sample1|t_28|handmade5|t_47|handmade4|handmade2|t_52|t_42|t_37|t_32|t_46|t_38|t_50|t_39|t_31|t_48|t_11|t_53|t_33|t_51|mincase1|t_29|sample3|t_44|t_36|t_27|t_45|handmade1|t_41|handmade3|t_49|t_34|t_43|t_26)$",
     "Subtask 4"
   ],
   [
-    -1,
+    15,
     "^(t_35|t_54|t_60|t_40|t_30|sample2|t_66|sample1|t_28|handmade5|t_47|t_17|handmade4|handmade2|t_52|t_42|t_37|t_58|t_65|t_15|t_32|t_71|t_18|t_46|t_72|t_38|t_55|t_50|t_75|t_39|t_31|t_64|t_57|t_68|t_69|t_76|t_74|t_48|t_11|t_16|t_67|t_53|t_33|t_51|t_63|mincase1|t_29|t_56|t_21|t_12|sample3|t_59|t_44|t_77|t_36|t_70|t_14|t_61|t_27|t_45|handmade1|t_20|t_41|handmade3|t_73|t_49|t_13|t_34|t_43|t_62|t_19|t_26)$",
     "Subtask 5"
   ],
   [
-    -1,
+    25,
     "^(t_35|t_54|t_60|t_3|t_40|t_83|t_30|sample2|t_66|t_23|sample1|t_28|handmade5|t_47|t_17|handmade4|handmade2|t_52|t_42|t_37|t_58|t_65|t_15|t_82|t_4|t_32|t_87|t_71|t_1|t_18|t_46|t_72|t_38|t_55|t_50|t_75|t_7|t_39|t_31|t_64|t_57|t_68|t_69|t_76|t_74|t_9|t_48|t_11|t_16|t_67|t_5|t_53|t_33|t_51|t_63|mincase1|t_29|t_84|t_56|t_21|t_12|sample3|t_59|t_44|t_78|t_77|t_36|t_70|t_14|t_61|t_27|t_45|handmade1|t_6|t_8|t_20|t_80|t_85|t_41|handmade3|t_73|t_49|t_88|t_13|t_24|t_25|t_34|t_10|t_89|t_43|t_62|t_22|t_2|t_19|t_26|t_81|t_86|t_79)$",
     "Subtask 6"
   ]

@@ -19,6 +19,8 @@ int main() {
     }
     printf("%d %d\n",N,K);
     for (int i=0; i<N; i++) {
-        printf("%d ",Vals[i]);
+        printf("%d",Vals[i]);
+		if (i < N-1) printf(" ");
     }
+	printf("\n");
 }
