@@ -1,4 +1,7 @@
-N,jewels = open("jewelsin.txt")
+import sys
+
+N,jewels = sys.stdin
+jewels = jewels.strip()
 
 blocks = []
 l = 0
@@ -31,4 +34,4 @@ if len(blocks) > 1:
 else:
     ans = N
 
-open("jewelsout.txt","w").write(str(ans))
+sys.stdout.write(str(ans) + "\n")

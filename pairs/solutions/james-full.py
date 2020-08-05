@@ -1,4 +1,6 @@
-X,Y = list(open("pairin.txt"))
+import sys
+
+X,Y = list(sys.stdin)
 
 N,A,B = map(int, X.split())
 skills = list(map(int, Y.split()))
@@ -14,5 +16,5 @@ for s in range(N):
     ans += r-l
     print(r,l)
 
-open("pairout.txt","w").write(str(ans))
+sys.stdout.write(str(ans))
 

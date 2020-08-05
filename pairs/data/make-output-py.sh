@@ -1,20 +1,12 @@
 #!/bin/bash
+# NOTE: Modified to be used with Python3
 
 echo "Compiling judge solutions..."
 
-# Prevent stack overflow
-ulimit -s 131072
-
 declare -a soln
-for i in ../solutions/*-full.cpp; do
-    exe=`basename $i`
-    exe=${exe%.cpp}
-    g++ $i -std=c++11 -o $exe
-    if [ $? -ne 0 ]; then
-        echo "$exe did not compile..."
-    else
-        soln+=($exe)    
-    fi
+for i in ../solutions/*-full.py; do
+	echo $i
+	soln+=$i
 done
 
 echo "Done"
@@ -31,7 +23,7 @@ for sol in ${soln[@]}; do
         if [ -e $output ]; then
             
             echo -n "Test $input "
-            ./$sol < $input > temp
+            python3 $sol < $input > temp
             diff -b temp $output > /dev/null
             if [ $? -eq 0 ]; then
                 echo "correct"
@@ -42,16 +34,12 @@ for sol in ${soln[@]}; do
         else
         
             echo "$output does not exist. Generating it now..."
-            ./$sol < $input > $output
+            python3 $sol < $input > $output
             if [ $? -ne 0 ]; then
                 rm $output
             fi
         fi
     done
-done
-
-for sol in ${soln[@]}; do
-    rm $sol
 done
 
 if [ -e temp ]; then
