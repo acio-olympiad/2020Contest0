@@ -8,10 +8,9 @@ input:
 	cp handmade/* .
 
 output: input
-	bash ./make-output.sh
+	bash ./make-output-py.sh
 
 check: input
-	bash ./run-validator.sh
 
 zip: input output check
 	zip data.zip *.in *.out
