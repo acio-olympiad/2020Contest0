@@ -1,0 +1,38 @@
+SB 1, 2, 3 and 4
+random test cases should be fine
+so generate a tree with n nodes, and chuck on some random edges
+There will always be max_edges edges.
+n will be from max_n/10, max_n/4, max_n/2, max_n/1.1, max_n, 5 cases each, one for each starting value of k.
+
+station bandwidths will be random
+
+Include test cases that have answer = 0,1,and max values of each respective test case.
+
+TODO: Include chain graph, line graph and star graph.
+
+
+SB 1,2,3,4
+Test case gen to find strong values of K:
+Will fix some value of k (from n/10, n/5, n/2, 7*n/8,n),
+
+Will then have my test case find the corresponding value to L, and the number of nodes the message reaches.
+then raise k to the number of nodes it reaches.
+then duplicate the test case, but add 1 to k (if it doesn't hit N).
+That way, the answer won't change, but the test case should be much stronger with regards to off by ones.
+
+Test bug where bandwidth of starting node is max value, 10% of cases
+Test bug where connectivity is assumed, 10% of cases
+
+Handmade cases n = 1, m = 0, k = 1
+
+
+SB 4
+n   
+max_n/10, d = 10
+max_n/4, d = 15
+max_n/2, d = 20
+max_n/1.1, d = 100
+max_n d = 30000
+don't forget to test ans = 0
+
+I think these values of d should be approapite. Need to play around with it though. The goal is that it should break the DFS
