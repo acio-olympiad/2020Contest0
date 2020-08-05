@@ -11,7 +11,7 @@ def do_subtask(subtask,max_n,max_m,max_bandwidth, use_dvals):
         if (use_dvals):
             d = dvals[i]
         else:
-            d = max_n
+            d = n
 
         for j in nvals:
             n = nc * max_n
