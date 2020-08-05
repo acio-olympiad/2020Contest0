@@ -1,7 +1,7 @@
 import os
 import random
 
-types = ["all-blue", "all-red", "alternating", "end-biased", "middle-biased", "ascending", "3reds", "no-adjacent-reds", "random-v1", "random-v2", "random-v3", "mixed"]
+types = ["all-blue", "all-red", "alternating", "end-biased", "middle-biased", "ascending", "2-non-adjacent-reds", "no-adjacent-reds", "random-v1", "random-v2", "random-v3", "mixed"]
 block_types = [3,4,5,9,11]
 
 def print_system(command):
@@ -9,11 +9,11 @@ def print_system(command):
     os.system(command)
 
 def gen_case(of, sb, *args):
-    print_system("python gen.py %d %s > %s-sub%d.in" % (sb, ' '.join(map(str,args)), of, sb))
+    print_system("python3 gen/gen.py %d %s > %s-sub%d.in" % (sb, ' '.join(map(str,args)), of, sb))
 
 def sub1():
     for i in range(16):
-        print_system("python gen-sub1.py %d > %d-sub1.in" % (i,i))
+        print_system("python3 gen/gen-sub1.py %d > %d-sub1.in" % (i,i))
 
 def sub2():
     gen_case("min", 2, 4)

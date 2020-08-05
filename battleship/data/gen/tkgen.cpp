@@ -19,10 +19,11 @@ int main() {
     for (int i=1; i<=N; i++) {
         for (int j=1; j<=M; j++) {
             if (type) { //type = 1 implies logrand
-                printf("%d ",logrand());
+                printf("%d",logrand());
             } else {
-                printf("%d ",rng(0,1000000));
+                printf("%d",rng(0,1000000));
             }
+			if (j < M) printf(" ");
         }
         printf("\n");
     }

@@ -1,0 +1,32 @@
+Sub1: 
+12 8 5 2
+
+Sub2: 
+min case
+1x11 3
+x111 5
+8x random cases
+69 420 1 1
+420 69 1 1
+
+Sub3:
+min case
+x111 5
+x1x1 5
+69 1 1 1
+420 1 1 1
+
+Sub4: 
+min case
+4444 
+5 5 5 5
+5 5 1 1
+5 1 1 1
+1 5 1 1
+
+Sub5:
+all of the above
+3x random cases
+10000 10000 1 1
+10000 10000 2 3
+5x big LW cases

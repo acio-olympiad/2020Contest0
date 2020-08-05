@@ -1,0 +1,18 @@
+sub1:
+    - do all 16 possible cases
+sub2:
+    - insert 2 random reds
+sub4:
+    - all blue
+    - random block sizes interleaved with reds
+    - alternating (must be even N)
+sub 3,5:
+    - min case
+    - all red
+    - all blue
+    - alternating (even and odd N)
+    - blocky
+    - end biased
+    - middle biased
+    - random
+    - mixed

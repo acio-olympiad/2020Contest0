@@ -5,8 +5,9 @@ def print_system(command):
     print("Generating", command.split()[-1])
     os.system(command)
 
+
 def gen_case(of, sb, *args):
-    print_system("python gen.py %d %s > %s-sub%d.in" % (sb, ' '.join(map(str,args)), of, sb))
+    print_system("python3 gen/gen.py %d %s > %s-sub%d.in" % (sb, ' '.join(map(str,args)), of, sb))
 
 def sub1():
     print("Subtask 1...")
@@ -48,18 +49,7 @@ def sub4():
     for i in range(5):
         gen_case("max-%d" % i, 4, 100000)
 
-def sub5():
-    print("Subtask 5...")
-    gen_case("min", 5, 2)
-    for i in range(10):
-        gen_case("small-%d" % i, 5, random.randint(6,10))
-    for i in range(5):
-        gen_case("random-%d" % i, 5, random.randint(2,100000))
-    for i in range(5):
-        gen_case("max-%d" % i, 5, 100000)
-
 sub1()
 sub2()
 sub3()
 sub4()
-sub5()
