@@ -42,7 +42,7 @@ int decision(int x){
 int main(){
     scanf("%d %d %d %d", &n,&m,&k,&d);
     for (int i =1 ; i <= n; i++){
-        scanf("%d ", &bandwidth[i]);
+        scanf("%d", &bandwidth[i]);
     }
     for (int i = 1; i <= m; i++){
         int a,b;
