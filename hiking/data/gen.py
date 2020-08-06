@@ -8,15 +8,16 @@ def do_subtask(subtask,max_n,max_m,max_bandwidth, use_dvals):
     m = max_m
     for i in range(len(nvals)):
         nc = nvals[i]
+        n = nc * max_n
+        n = min(max_n,int(n))
+
         if (use_dvals):
             d = dvals[i]
         else:
             d = n
 
         for j in nvals:
-            n = nc * max_n
             k = j * n
-            n = min(max_n,int(n))
             k = min(max_n,int(k))
             disconnect_starting_node = 1 if (random.randint(1,10) == 1) else 0
             high_starting_node_bandwidth = 1 if (random.randint(1,10) == 1) else 0
