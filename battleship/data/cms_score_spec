@@ -1,4 +1,5 @@
 [
+  [ 0, "^sample", "Sample Cases" ],
   [
     15,
     "^(t_3|sample2|t_4|t_1|t_7|t_9|t_11|t_5|mincase1|t_6|t_8|t_10|t_2)$",

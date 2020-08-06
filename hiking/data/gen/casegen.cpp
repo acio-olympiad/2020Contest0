@@ -134,7 +134,7 @@ int main() {
 
     // printf("%d\n", best);
     printf("%d %d %d %d\n", n, m, k, d);
-    printf("%d ", bandwidth[1]);
+    printf("%d", bandwidth[1]);
     for (int i = 2; i <= n; i++){
         printf(" %d", bandwidth[i]);
     }

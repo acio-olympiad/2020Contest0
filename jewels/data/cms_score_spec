@@ -1,4 +1,5 @@
 [
+  [ 0, "^sample", "Sample Cases" ],
   [
     25,
     "^(3-sub1|15-sub1|4-sub1|2-sub1|min-sub5|6-sub1|9-sub1|13-sub1|8-sub1|12-sub1|min-sub3|min-sub2|11-sub1|sample3|10-sub1|0-sub1|7-sub1|5-sub1|1-sub1|14-sub1|min-sub4)$",
