@@ -14,7 +14,6 @@ for s in range(N):
     while l > s and skills[s] + skills[l] >= A:l-=1
     while r > s and skills[s] + skills[r] > B:r-=1
     ans += r-l
-    print(r,l)
 
 sys.stdout.write(str(ans))
 
