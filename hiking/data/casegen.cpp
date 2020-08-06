@@ -64,14 +64,14 @@ d
 */
 
 int main() {
-    freopen("test.in", "r", stdin);
+    // freopen("test.in", "r", stdin);
     srand(time(NULL)); 
     int subtask;
     int max_bandwidth;
     int disconnect_starting_node;
     int high_starting_node_bandwidth;
     int bump_k_target;
-    printf("%d\n",scanf("%d %d %d %d %d", &subtask, &max_bandwidth, &disconnect_starting_node, &high_starting_node_bandwidth, &bump_k_target));
+    scanf("%d %d %d %d %d", &subtask, &max_bandwidth, &disconnect_starting_node, &high_starting_node_bandwidth, &bump_k_target);
     scanf(" %d %d %d %d", &n, &m, &k, &d);
     // printf("%d %d\n",subtask, max_bandwidth);
     // printf("????");
@@ -132,14 +132,14 @@ int main() {
         }
     }
 
-    printf("%d\n", best);
+    // printf("%d\n", best);
     printf("%d %d %d %d\n", n, m, k, d);
-    // printf("%d ", bandwidth[1]);
-    // for (int i = 2; i <= n; i++){
-    //     printf(" %d", bandwidth[i]);
-    // }
-    // printf("\n");
-    // for (pii cur : final_edges){
-    //     printf("%d %d\n", cur.first, cur.second);
-    // }
+    printf("%d ", bandwidth[1]);
+    for (int i = 2; i <= n; i++){
+        printf(" %d", bandwidth[i]);
+    }
+    printf("\n");
+    for (pii cur : final_edges){
+        printf("%d %d\n", cur.first, cur.second);
+    }
 }
