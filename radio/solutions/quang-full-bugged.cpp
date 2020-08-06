@@ -1,5 +1,3 @@
-// should only get subtasks 1-3
-
 #include <cstdio>
 #include <vector>
 #include <queue>
@@ -9,29 +7,35 @@ int n,m,k,d;
 vector<int> g[100005];
 int bandwidth[100005];
 int dist[100005];
-bool seen[100005];
+bool pushed[100005];
 
-void dfs( int pos, int cur_depth,int x){
-    seen[pos] = true;
-    dist[pos] = cur_depth;
-    if (cur_depth == d) return;
-    for (int tgt : g[pos]){
-        if (bandwidth[tgt] >= x && !seen[tgt]){
-            dfs(tgt,cur_depth+1,x);
-        }
-    }
-}
 
 int decision(int x){
-    if (bandwidth[1] < x) return 0;
+    // *** this is the line commented out. Very subtle bug.
+    // if (bandwidth[1] < x) return 0;
     for (int i = 1; i <= n; i++){
         dist[i] = 1e9;
-        seen[i] = false;
+        pushed[i] = false;
     }
-    dfs(1,0,x);
+    queue<int> q;
+    q.push(1);
+    pushed[1] = true;
+    dist[1] = 0;
+    while (!q.empty()){
+        int cur = q.front();
+        q.pop();
+        for (int tgt : g[cur]){
+            if (pushed[tgt] || bandwidth[tgt] < x) continue;
+            pushed[tgt] = true;
+            dist[tgt] = dist[cur]+1;
+            q.push(tgt);
+        }
+    }
     int cnt = 0;
     for (int i = 1; i <= n; i++){
-        cnt += seen[i];
+        if (dist[i] <= d){
+            cnt++;
+        }
     }
     return cnt;
 }
@@ -39,7 +43,6 @@ int decision(int x){
 int main(){
     freopen("radin.txt", "r", stdin);
     freopen("radout.txt", "w", stdout);
-
     scanf("%d %d %d %d", &n,&m,&k,&d);
     for (int i =1 ; i <= n; i++){
         scanf("%d", &bandwidth[i]);

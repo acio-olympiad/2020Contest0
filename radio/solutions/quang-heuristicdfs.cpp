@@ -1,4 +1,4 @@
-// should only get subtasks 1-3
+// should only get subtask 3, technically O(n^2)
 
 #include <cstdio>
 #include <vector>
@@ -16,7 +16,7 @@ void dfs( int pos, int cur_depth,int x){
     dist[pos] = cur_depth;
     if (cur_depth == d) return;
     for (int tgt : g[pos]){
-        if (bandwidth[tgt] >= x && !seen[tgt]){
+        if (bandwidth[tgt] >= x && cur_depth+ 1 < dist[tgt]){
             dfs(tgt,cur_depth+1,x);
         }
     }
