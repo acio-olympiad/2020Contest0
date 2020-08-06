@@ -1,4 +1,5 @@
 [
+  [ 0, "^sample", "Sample Data" ],
   [
     20,
     "^(t_3|sample1|t_17|t_15|mincase|t_4|t_1|t_7|t_9|t_11|t_16|t_5|t_33|t_12|t_14|t_6|t_8|t_13|t_34|t_10|t_2)$",
